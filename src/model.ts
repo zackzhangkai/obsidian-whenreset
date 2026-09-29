@@ -44,6 +44,20 @@ export function validateRadar(data: unknown): RadarData {
   return d;
 }
 
+export interface RadarState { radar: RadarData | null; checkedAt: number | null; lastSuccessAt: number | null; error: string | null; }
+
+export function buildFetchUrl(url: string, nonce: number): string {
+  const u = new URL(url);
+  u.searchParams.set('refresh', String(nonce));
+  return u.toString();
+}
+
+export function nextRadarState(prev: RadarState, radar: RadarData | null, now: number): RadarState {
+  return radar
+    ? { radar, checkedAt: now, lastSuccessAt: now, error: null }
+    : { radar: prev.radar, checkedAt: now, lastSuccessAt: prev.lastSuccessAt, error: '更新失败，正在显示上次数据。' };
+}
+
 export const SOURCE_ZONE = 'America/Los_Angeles';
 const DAY = 86400000;
 

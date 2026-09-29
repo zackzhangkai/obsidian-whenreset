@@ -36,13 +36,13 @@ export class RadarView extends ItemView {
   }
 
   private render(): void {
-    const { radar, error, checkedAt } = this.plugin.store.getState();
+    const { radar, error, lastSuccessAt } = this.plugin.store.getState();
     const root = this.contentEl;
     root.empty();
     root.addClass('whenreset-view');
 
     const head = root.createDiv({ cls: 'whenreset-status-line' });
-    const updated = checkedAt ? dateFmt(new Date(checkedAt).toISOString()) : '';
+    const updated = lastSuccessAt ? dateFmt(new Date(lastSuccessAt).toISOString()) : '';
     head.setText(error
       ? `${error}${updated ? ' 上次成功更新：' + updated : ''}`
       : radar && radar.sync.status !== 'ok' ? '网站采集异常，数据可能过时。'

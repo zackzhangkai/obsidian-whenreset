@@ -1,12 +1,11 @@
 import { requestUrl } from 'obsidian';
-import { validateRadar } from './model.ts';
-import type { RadarData } from './types.ts';
+import { buildFetchUrl, nextRadarState, validateRadar } from './model.ts';
+import type { RadarState } from './model.ts';
 
-export interface RadarState { radar: RadarData | null; checkedAt: number | null; error: string | null; }
 type Listener = (state: RadarState) => void;
 
 export class RadarStore {
-  private state: RadarState = { radar: null, checkedAt: null, error: null };
+  private state: RadarState = { radar: null, checkedAt: null, lastSuccessAt: null, error: null };
   private listeners = new Set<Listener>();
   private inFlight: Promise<void> | null = null;
   private url: string;
@@ -26,12 +25,11 @@ export class RadarStore {
     if (this.inFlight) return this.inFlight;
     this.inFlight = (async () => {
       try {
-        const res = await requestUrl({ url: `${this.url}?refresh=${Date.now()}`, method: 'GET', throw: false });
-        if (res.status !== 200) throw new Error(`HTTP ${res.status}`);
-        const radar = validateRadar(res.json);
-        this.state = { radar, checkedAt: Date.now(), error: null };
+        const res = await requestUrl({ url: buildFetchUrl(this.url, Date.now()), method: 'GET', throw: false });
+        const radar = res.status === 200 ? validateRadar(res.json) : null;
+        this.state = nextRadarState(this.state, radar, Date.now());
       } catch {
-        this.state = { ...this.state, checkedAt: Date.now(), error: '更新失败，正在显示上次数据。' };
+        this.state = nextRadarState(this.state, null, Date.now());
       }
       for (const fn of this.listeners) fn(this.state);
     })().finally(() => { this.inFlight = null; });
