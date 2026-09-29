@@ -1,0 +1,14 @@
+.whenreset-view { padding: 12px; }
+.whenreset-status-line { color: var(--text-muted); font-size: var(--font-ui-smaller); margin-bottom: 8px; }
+.whenreset-kind { color: var(--text-muted); font-size: var(--font-ui-smaller); }
+.whenreset-clock-time { font-size: 2em; font-weight: var(--font-bold); color: var(--text-normal); font-variant-numeric: tabular-nums; margin: 4px 0; }
+.whenreset-target { color: var(--text-muted); font-size: var(--font-ui-smaller); }
+.whenreset-activity { margin-top: 4px; }
+.whenreset-actions { margin: 12px 0; }
+.whenreset-feed { display: flex; flex-direction: column; gap: 8px; }
+.whenreset-item { border: 1px solid var(--background-modifier-border); border-radius: var(--radius-s); padding: 8px; }
+.whenreset-item time { color: var(--text-faint); font-size: var(--font-ui-smaller); margin-left: 6px; }
+.whenreset-item p { margin: 6px 0 4px; color: var(--text-normal); }
+.whenreset-tag { font-size: var(--font-ui-smaller); padding: 1px 6px; border-radius: var(--radius-s); background: var(--background-modifier); color: var(--text-muted); }
+.whenreset-tag-scheduled, .whenreset-tag-completed { background: var(--background-modifier-success); color: var(--text-on-accent); }
+.whenreset-status { cursor: pointer; font-variant-numeric: tabular-nums; }

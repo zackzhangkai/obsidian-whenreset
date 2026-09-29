@@ -1,0 +1,10 @@
+{
+  "id": "whenreset",
+  "name": "Codex Reset Radar (WhenReset)",
+  "version": "1.0.0",
+  "minAppVersion": "1.5.0",
+  "description": "追踪 Codex 公开重置消息与预测倒计时。Track public Codex reset signals with a live countdown in Obsidian.",
+  "author": "zackzhangkai",
+  "authorUrl": "https://whenreset.uk",
+  "isDesktopOnly": false
+}
