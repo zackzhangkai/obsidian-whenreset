@@ -10,7 +10,7 @@ export class WhenresetSettingTab extends PluginSettingTab {
   display(): void {
     const { containerEl } = this;
     containerEl.empty();
-    containerEl.createEl('h2', { text: '重置雷达' });
+    new Setting(containerEl).setName('重置雷达').setHeading();
 
     new Setting(containerEl)
       .setName('数据源地址')

@@ -1,6 +1,6 @@
 import esbuild from "esbuild";
 import process from "process";
-import builtins from "builtin-modules";
+import { builtinModules } from "node:module";
 
 const banner = `/* whenreset · Codex Reset Radar — 数据来自 https://whenreset.uk 公开 JSON */`;
 const prod = process.argv[2] === "production";
@@ -8,7 +8,7 @@ const context = await esbuild.context({
   banner: { js: banner },
   entryPoints: ["src/main.ts"],
   bundle: true,
-  external: ["obsidian", "electron", "@codemirror/state", "@codemirror/view", ...builtins],
+  external: ["obsidian", "electron", "@codemirror/state", "@codemirror/view", ...builtinModules],
   format: "cjs",
   target: "es2018",
   logLevel: "info",

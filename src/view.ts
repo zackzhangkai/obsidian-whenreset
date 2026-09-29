@@ -91,7 +91,7 @@ export class RadarView extends ItemView {
       .slice(0, 8);
     for (const e of visible) {
       const item = list.createEl('article', { cls: 'whenreset-item' });
-      item.createEl('span', { cls: 'whenreset-tag whenreset-tag-' + e.status, text: tagLabel(e) });
+      item.createSpan({ cls: 'whenreset-tag whenreset-tag-' + e.status, text: tagLabel(e) });
       item.createEl('time', { text: dateFmt(e.publishedAt) });
       item.createEl('p', { text: e.summary || e.title });
       const source = safeSource(e.sourceUrl);

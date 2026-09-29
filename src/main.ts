@@ -78,7 +78,7 @@ export default class WhenresetPlugin extends Plugin {
       leaf = workspace.getRightLeaf(false);
       await leaf?.setViewState({ type: VIEW_TYPE_WHENRESET, active: true });
     }
-    if (leaf) workspace.revealLeaf(leaf);
+    if (leaf) await workspace.revealLeaf(leaf); // @since 1.7.2,与 manifest minAppVersion 对齐
   }
 
   private renderStatus(): void {

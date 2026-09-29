@@ -1,8 +1,8 @@
 {
   "id": "whenreset",
   "name": "Codex Reset Radar (WhenReset)",
-  "version": "1.0.2",
-  "minAppVersion": "1.5.0",
+  "version": "1.0.3",
+  "minAppVersion": "1.7.2",
   "description": "追踪 Codex 公开重置消息与预测倒计时。Track public Codex reset signals with a live countdown.",
   "author": "zackzhangkai",
   "authorUrl": "https://whenreset.uk",

@@ -1,6 +1,6 @@
 {
   "name": "whenreset-obsidian-plugin",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "private": true,
   "type": "module",
   "engines": { "node": ">=22.18" },
@@ -12,7 +12,6 @@
   },
   "devDependencies": {
     "@types/node": "^22.0.0",
-    "builtin-modules": "^4.0.0",
     "esbuild": "^0.25.0",
     "obsidian": "^1.9.0",
     "typescript": "^5.6.0"
