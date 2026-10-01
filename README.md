@@ -1,5 +1,9 @@
 # Codex Reset Radar (WhenReset)
 
+<p align="center">
+  <img src="./assets/readme/hero.svg" width="100%" alt="Codex Reset Radar：Obsidian 内的公开重置信号雷达，展示本地倒计时、候选信号和事件来源">
+</p>
+
 在 Obsidian 里追踪 ChatGPT / Codex 的公开额度重置信号：状态栏倒计时、侧边栏雷达和新公告通知。它只读取 [WhenReset](https://whenreset.uk) 的公开雷达数据，不连接 ChatGPT、Codex 或你的账户。
 
 Track public ChatGPT / Codex reset signals in Obsidian with a status-bar countdown, a sidebar radar, and notices for new announcements. The plugin reads only the public [WhenReset](https://whenreset.uk) radar data; it never connects to your ChatGPT, Codex, or personal account.

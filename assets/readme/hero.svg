@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" role="img" aria-labelledby="title desc">
+  <title id="title">Codex Reset Radar for Obsidian</title>
+  <desc id="desc">A dark technical title board showing a radar, countdown, public-signal labels, and the plugin's sidebar and status-bar capabilities.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#10182f"/>
+      <stop offset="1" stop-color="#07101d"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#4ee7c1" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#4ee7c1" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="400" rx="28" fill="url(#bg)"/>
+  <path d="M0 80H1200M0 160H1200M0 240H1200M0 320H1200M120 0V400M240 0V400M360 0V400M480 0V400M600 0V400M720 0V400M840 0V400M960 0V400M1080 0V400" stroke="#c5d0ec" stroke-opacity=".055"/>
+  <rect x="48" y="46" width="292" height="30" rx="15" fill="#182743"/>
+  <circle cx="68" cy="61" r="5" fill="#4ee7c1"/>
+  <text x="84" y="67" fill="#c7d4ef" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18" letter-spacing="1.2">PUBLIC SIGNALS · OBSIDIAN</text>
+  <text x="48" y="145" fill="#f5f8ff" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="58" font-weight="700">Codex Reset</text>
+  <text x="48" y="208" fill="#4ee7c1" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="58" font-weight="700">Radar</text>
+  <text x="50" y="252" fill="#b6c3dd" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="24">在 Obsidian 里持续观察公开重置信号。</text>
+  <text x="50" y="282" fill="#8090ad" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">Local countdown · Read-only public data · No account access</text>
+  <rect x="48" y="318" width="174" height="38" rx="19" fill="#193a45" stroke="#4ee7c1" stroke-opacity=".55"/>
+  <text x="69" y="344" fill="#a8f3df" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">STATUS BAR</text>
+  <rect x="234" y="318" width="178" height="38" rx="19" fill="#1a2440" stroke="#7e9cff" stroke-opacity=".6"/>
+  <text x="259" y="344" fill="#c6d2ff" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">SIDEBAR RADAR</text>
+
+  <rect x="604" y="40" width="548" height="320" rx="22" fill="#0b1428" stroke="#30415f" stroke-width="2"/>
+  <rect x="628" y="64" width="500" height="38" rx="10" fill="#13203a"/>
+  <circle cx="651" cy="83" r="6" fill="#4ee7c1"/>
+  <text x="669" y="90" fill="#d7e1f7" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">RADAR VIEW / 公开信号</text>
+  <rect x="628" y="120" width="205" height="210" rx="15" fill="#0c1930"/>
+  <circle cx="730" cy="225" r="82" fill="none" stroke="#31506b" stroke-width="2"/>
+  <circle cx="730" cy="225" r="54" fill="none" stroke="#31506b" stroke-width="2"/>
+  <circle cx="730" cy="225" r="27" fill="none" stroke="#31506b" stroke-width="2"/>
+  <path d="M730 225 L730 143 A82 82 0 0 1 802 260 Z" fill="url(#beam)"/>
+  <path d="M730 225 L797 180" stroke="#4ee7c1" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="797" cy="180" r="7" fill="#4ee7c1"/>
+  <circle cx="730" cy="225" r="7" fill="#f3fbff"/>
+  <text x="674" y="308" fill="#8292b0" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">SIGNAL TRACKER</text>
+  <rect x="856" y="120" width="248" height="91" rx="14" fill="#11223a"/>
+  <text x="880" y="149" fill="#8ea0bf" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">预计下次重置</text>
+  <text x="880" y="188" fill="#f3f7ff" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="32" font-weight="700">02d 09:42:17</text>
+  <rect x="856" y="226" width="248" height="104" rx="14" fill="#11223a"/>
+  <text x="880" y="255" fill="#8ea0bf" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">最近额度动态</text>
+  <circle cx="885" cy="283" r="5" fill="#7e9cff"/>
+  <text x="900" y="290" fill="#d7e1f7" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC', sans-serif" font-size="20">候选信号 · 查看原帖 ↗</text>
+  <text x="50" y="385" fill="#64748f" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace" font-size="18">whenreset.uk / api/radar.json · unofficial · privacy-first</text>
+</svg>
